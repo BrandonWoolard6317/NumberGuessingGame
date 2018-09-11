@@ -15,9 +15,8 @@ public class NumberGuessingGame {
 		//Generating random number
 		generatedNumber = (int) (Math.random() * 100);
 
-		//Prints out generated number 
-		System.out.println(generatedNumber);
-		//Temporary until project is fully tested and complete
+		//Prints out generated number
+		//System.out.println(generatedNumber);
 
 		//Grabbing users input
 		System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 and 100. Also," +
@@ -122,7 +121,19 @@ public class NumberGuessingGame {
 		if(numberGuessing < generatedNumber){
 			System.out.println(numberGuessing+" was too low of a number! You have 2 more attempts left at guessing " +
 					"the random number.\nTry again.");
+		}    
+		usersInput = keyboard.nextLine();
+		numberGuessing = Integer.parseInt(usersInput);
+		if(numberGuessing < 0){
+			System.out.println("Invalid! Please pick a number between 0-100");
+			usersInput = keyboard.nextLine();
+			numberGuessing = Integer.parseInt(usersInput);
 		}
+		if(numberGuessing > 100){
+			System.out.println("Invalid! Please pick a number between 0-100");
+			usersInput = keyboard.nextLine();
+			numberGuessing = Integer.parseInt(usersInput);
+		}            
 		if(numberGuessing == generatedNumber){
 			System.out.println("Congrats! You were correct on your fourth try. "+generatedNumber+" was the random number" +
 					" and feel free to play again!");
@@ -136,6 +147,18 @@ public class NumberGuessingGame {
 			System.out.println(numberGuessing+" was too low of a number! You have 1 last attempt left at guessing " +
 			"the random number.\nTry again.");
 		}
+		usersInput = keyboard.nextLine();
+		numberGuessing = Integer.parseInt(usersInput);
+		if(numberGuessing < 0){
+			System.out.println("Invalid! Please pick a number between 0-100");
+			usersInput = keyboard.nextLine();
+			numberGuessing = Integer.parseInt(usersInput);
+		}
+		if(numberGuessing > 100){
+			System.out.println("Invalid! Please pick a number between 0-100");
+			usersInput = keyboard.nextLine();
+			numberGuessing = Integer.parseInt(usersInput);
+		}            
 		if(numberGuessing == generatedNumber){
 			System.out.println("Congrats! You were correct on your last try. "+generatedNumber+" was the random number" +
 					" and feel free to play again!");
