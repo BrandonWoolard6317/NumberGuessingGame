@@ -109,7 +109,7 @@ public class NumberGuessingGame {
 			System.out.println("Invalid! Please pick a number between 0-100");
 			usersInput = keyboard.nextLine();
 			numberGuessing = Integer.parseInt(usersInput);
-		}
+		}            
 		if(numberGuessing == generatedNumber){
 			System.out.println("Congrats! You were correct on your third try. "+generatedNumber+" was the random number" +
 					" and feel free to play again!");
@@ -135,6 +135,11 @@ public class NumberGuessingGame {
 		if(numberGuessing < generatedNumber){
 			System.out.println(numberGuessing+" was too low of a number! You have 1 last attempt left at guessing " +
 			"the random number.\nTry again.");
+		}
+		if(numberGuessing == generatedNumber){
+			System.out.println("Congrats! You were correct on your last try. "+generatedNumber+" was the random number" +
+					" and feel free to play again!");
+			System.exit(0);
 		}
 		if(numberGuessing > generatedNumber){
 			System.out.println(numberGuessing+" was too high of a number! Sorry that was your last attempt. Feel free" +
