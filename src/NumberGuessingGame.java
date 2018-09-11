@@ -19,9 +19,9 @@ public class NumberGuessingGame {
 		//System.out.println(generatedNumber);
 
 		//Grabbing users input
-		System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 and 100. Also," +
-				"I will tell you \nif you are too hig or too low. However... you only have 5 total attempts!");
-		System.out.print("\nNow pick a number between 0-100\n");
+		System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
+				"I will tell you \nif you are too high or too low. However... you only have 5 total attempts!");
+		System.out.print("\nNow pick a number between 0-100 and good luck!\n");
 		usersInput = keyboard.nextLine();
 		numberGuessing = Integer.parseInt(usersInput);
 		if(numberGuessing < 0){
@@ -39,7 +39,7 @@ public class NumberGuessingGame {
 		yesOrNo = keyboard.nextLine();
 		keepOrChange = Integer.parseInt(yesOrNo);
 		if(keepOrChange == 1){
-			System.out.println("Your number is "+numberGuessing+". Goodluck!");
+			System.out.println("Your number is "+numberGuessing+".");
 		}
 		if(keepOrChange == 0){
 			System.out.println("Enter your new number in. This is your last change!");
@@ -140,11 +140,11 @@ public class NumberGuessingGame {
 			System.exit(0);
 		}
 		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! You have 1 last attempt left at guessing " +
+			System.out.println(numberGuessing+" was too high of a number! You have 1 last attempt of guessing " +
 					"the random number.\nTry again.");
 		}
 		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! You have 1 last attempt left at guessing " +
+			System.out.println(numberGuessing+" was too low of a number! You have 1 last attempt of guessing " +
 			"the random number.\nTry again.");
 		}
 		usersInput = keyboard.nextLine();
@@ -165,13 +165,13 @@ public class NumberGuessingGame {
 			System.exit(0);
 		}
 		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! Sorry that was your last attempt. Feel free" +
-					" to play again.");
+			System.out.println(numberGuessing+" was too high of a number! Sorry that was your last attempt. The random" +
+					" number was "+generatedNumber+". Feel free to play again!");
 			System.exit(0);
 		}
 		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! Sorry that was your last attempt. Feel free" +
-					" to play again.");
+			System.out.println(numberGuessing+" was too low of a number! Sorry that was your last attempt. The random" +
+					" number was "+generatedNumber+". Feel free to play again!");
 			System.exit(0);
 		}
 	}
