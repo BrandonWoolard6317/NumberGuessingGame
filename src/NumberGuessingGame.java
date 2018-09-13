@@ -15,7 +15,7 @@ public class NumberGuessingGame {
 		//Generating random number
 		generatedNumber = (int) (Math.random() * 100);
 
-		//Prints out generated number
+		//Prints out generated number for testing
 		//System.out.println(generatedNumber);
 
 		//Grabbing users input
