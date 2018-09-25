@@ -4,7 +4,7 @@ public class NumberGuessingGame {
 	public static void main(String[] args) {
 		//Declaring variables
 		String usersInput;
-		String yesOrNo;
+		int yesOrNo;
 		int generatedNumber;
 		int numberGuessing;
 		int keepOrChange;
@@ -19,7 +19,7 @@ public class NumberGuessingGame {
 		//System.out.println(generatedNumber);
 
 		//Grabbing users input
-		System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
+		/*System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
 				"I will tell you \nif you are too high or too low. However... you only have 5 total attempts!");
 		System.out.print("\nNow pick a number between 0-100 and good luck!\n");
 		usersInput = keyboard.nextLine();
@@ -173,6 +173,17 @@ public class NumberGuessingGame {
 			System.out.println(numberGuessing+" was too low of a number! Sorry that was your last attempt. The random" +
 					" number was "+generatedNumber+". Feel free to play again!");
 			System.exit(0);
+		}*/
+
+		System.out.print("Do you wan to play my new game called The Number Guessing Game?\n1 Yes\n2 No");
+		usersInput = keyboard.nextLine();
+		yesOrNo = Integer.parseInt(usersInput);
+		if(yesOrNo == 1){
+			generatedNumber = (int) (Math.random() * 100);
+			System.out.println("Guess a number between 0-100.");
+			usersInput = keyboard.nextLine();
+			numberGuessing = Integer.parseInt(usersInput);
+			
 		}
 	}
 }
