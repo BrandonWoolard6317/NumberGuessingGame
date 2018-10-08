@@ -14,11 +14,11 @@ public class NumberGuessingGame {
 		//Generating random number
 		generatedNumber = (int) (Math.random() * 100);
 
-		//Prints out generated number for testing
-		System.out.println(generatedNumber);
+		//Prints out generated number for testing on Original Code
+		//System.out.println(generatedNumber);
 
-		//Grabbing users input
-		System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
+		//Start of Original Code
+		/*System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
 				"I will tell you \nif you are too high or too low. However... you only have 5 total attempts!");
 		System.out.print("\nNow pick a number between 0-100 and good luck!\n");
 		usersInput = keyboard.nextLine();
@@ -172,10 +172,11 @@ public class NumberGuessingGame {
 			System.out.println(numberGuessing+" was too low of a number! Sorry that was your last attempt. The random" +
 					" number was "+generatedNumber+". Feel free to play again!");
 			System.exit(0);
-		}
+		}*/
+		//End of Original Code
 
 		//Loop for Number Guessing Game
-		/*System.out.print("Do you want to play my new game called The Number Guessing Game?\n1 Yes\n2 No");
+		System.out.print("Do you want to play my new game called The Number Guessing Game?\n1 Yes\n2 No");
 		usersInput = keyboard.nextLine();
 		yesOrNo = Integer.parseInt(usersInput);
 		if(yesOrNo == 0){
@@ -185,6 +186,10 @@ public class NumberGuessingGame {
 		System.out.println("Guess a number between 0-100.");
 		usersInput = keyboard.nextLine();
 		numberGuessing = Integer.parseInt(usersInput);
+
+		//Prints out Generated Number for testing Loop
+		//System.out.println(generatedNumber);
+
 		int a = 0;
 		boolean Loop = true;
 		while(Loop){
@@ -222,7 +227,7 @@ public class NumberGuessingGame {
 				usersInput = keyboard.nextLine();
 				numberGuessing = Integer.parseInt(usersInput);
 			}
-		}*/
+		}
 		//End of Loop
 	}
 }
