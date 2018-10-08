@@ -7,7 +7,6 @@ public class NumberGuessingGame {
 		int yesOrNo;
 		int generatedNumber;
 		int numberGuessing;
-		int keepOrChange;
 
 		//Initializing Variables
 		Scanner keyboard = new Scanner(System.in);
@@ -16,10 +15,10 @@ public class NumberGuessingGame {
 		generatedNumber = (int) (Math.random() * 100);
 
 		//Prints out generated number for testing
-		//System.out.println(generatedNumber);
+		System.out.println(generatedNumber);
 
 		//Grabbing users input
-		/*System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
+		System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
 				"I will tell you \nif you are too high or too low. However... you only have 5 total attempts!");
 		System.out.print("\nNow pick a number between 0-100 and good luck!\n");
 		usersInput = keyboard.nextLine();
@@ -36,12 +35,12 @@ public class NumberGuessingGame {
 		}
 		System.out.println("Ok you have chosen the number "+usersInput+". Are you sure this is the number you want?"+
 				"\n0 For No\n1 For Yes");
-		yesOrNo = keyboard.nextLine();
-		keepOrChange = Integer.parseInt(yesOrNo);
-		if(keepOrChange == 1){
+		usersInput = keyboard.nextLine();
+		yesOrNo = Integer.parseInt(usersInput);
+		if(yesOrNo == 1){
 			System.out.println("Your number is "+numberGuessing+".");
 		}
-		if(keepOrChange == 0){
+		if(yesOrNo == 0){
 			System.out.println("Enter your new number in. This is your last change!");
 			usersInput = keyboard.nextLine();
 			numberGuessing = Integer.parseInt(usersInput);
@@ -173,10 +172,10 @@ public class NumberGuessingGame {
 			System.out.println(numberGuessing+" was too low of a number! Sorry that was your last attempt. The random" +
 					" number was "+generatedNumber+". Feel free to play again!");
 			System.exit(0);
-		}*/
+		}
 
 		//Loop for Number Guessing Game
-		System.out.print("Do you want to play my new game called The Number Guessing Game?\n1 Yes\n2 No");
+		/*System.out.print("Do you want to play my new game called The Number Guessing Game?\n1 Yes\n2 No");
 		usersInput = keyboard.nextLine();
 		yesOrNo = Integer.parseInt(usersInput);
 		if(yesOrNo == 0){
@@ -223,7 +222,7 @@ public class NumberGuessingGame {
 				usersInput = keyboard.nextLine();
 				numberGuessing = Integer.parseInt(usersInput);
 			}
-		}
+		}*/
 		//End of Loop
 	}
 }
