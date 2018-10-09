@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bb348d4-41cb-41d1-9321-fe2702b21fb9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NumberGuessingGame/NumberGuessingGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NumberGuessingGame/NumberGuessingGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NumberGuessingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberGuessingGame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,12 +47,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="NumberGuessingGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NumberGuessingGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3791">
-              <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+            <state relative-caret-position="323">
+              <caret line="208" column="27" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -88,7 +90,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,8 +109,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,7 +220,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13086233" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1323752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -237,6 +239,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/NumberGuessingGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3876">
+          <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NumberGuessingGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3145">
@@ -281,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NumberGuessingGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3791">
-          <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="208" column="27" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
         </state>
       </provider>
     </entry>

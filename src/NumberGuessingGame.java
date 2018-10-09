@@ -191,15 +191,25 @@ public class NumberGuessingGame {
 		//System.out.println(generatedNumber);
 
 		int a = 0;
+		int g = 1;
+		int fn = Integer.parseInt(usersInput);
+		int po;
+
 		boolean Loop = true;
 		while(Loop){
 			a++;
 			if(numberGuessing == generatedNumber){
+			    g++;
 				if(a == 1){
 					System.out.println("Congrats! You won using only 1 attempt!");
 				} else{
 					System.out.println("Congrats! You won using "+a+" attempts!");
 				}
+				if(generatedNumber > fn){
+				    po = ?;
+                }
+                System.out.println("Game "+g+" results\nAttempts: "+a+"\nFirst Number: "+fn+"\nGenerated Number: "+generatedNumber+
+                        "\nYou were "+po+ " off on your first attempt.");
 				System.out.println("\nDo you want to play again?\n1 For Yes\n2 For No");
 				usersInput = keyboard.nextLine();
 				yesOrNo = Integer.parseInt(usersInput);
@@ -210,6 +220,7 @@ public class NumberGuessingGame {
 					System.out.println("Guess a new number between 0-100.");
 					usersInput = keyboard.nextLine();
 					numberGuessing = Integer.parseInt(usersInput);
+					fn = Integer.parseInt(usersInput);
 					a = 1;
 				}
 			}
