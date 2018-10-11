@@ -11,234 +11,328 @@ public class NumberGuessingGame {
 		//Initializing Variables
 		Scanner keyboard = new Scanner(System.in);
 
-		//Generating random number
-		generatedNumber = (int) (Math.random() * 100);
-
-		//Prints out generated number for testing on Original Code
-		//System.out.println(generatedNumber);
-
-		//Start of Original Code
-		/*System.out.println("Lets play a guessing game! The rules are that I will pick a number between 0 to 100. Also," +
-				"I will tell you \nif you are too high or too low. However... you only have 5 total attempts!");
-		System.out.print("\nNow pick a number between 0-100 and good luck!\n");
-		usersInput = keyboard.nextLine();
-		numberGuessing = Integer.parseInt(usersInput);
-		if(numberGuessing < 0){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		if(numberGuessing > 100){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		System.out.println("Ok you have chosen the number "+usersInput+". Are you sure this is the number you want?"+
-				"\n0 For No\n1 For Yes");
-		usersInput = keyboard.nextLine();
-		yesOrNo = Integer.parseInt(usersInput);
-		if(yesOrNo == 1){
-			System.out.println("Your number is "+numberGuessing+".");
-		}
-		if(yesOrNo == 0){
-			System.out.println("Enter your new number in. This is your last change!");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-			if(numberGuessing < 0){
-				System.out.println("Invalid! Please pick a number between 0-100");
-				usersInput = keyboard.nextLine();
-				numberGuessing = Integer.parseInt(usersInput);
-			}
-			if(numberGuessing > 100){
-				System.out.println("Invalid! Please pick a number between 0-100");
-				usersInput = keyboard.nextLine();
-				numberGuessing = Integer.parseInt(usersInput);
-			}
-			System.out.println("Your number is "+numberGuessing+". Goodluck!");
-		}
-
-		//If statements of number guessing
-		if(numberGuessing == generatedNumber){
-			System.out.println("Congrats! You were correct on your first try. "+generatedNumber+" was the random number" +
-					" and feel free to play again!");
-			System.exit(0);
-		}
-		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! You have 4 more attempts at guessing " +
-					"the random number.\nTry again.");
-		}
-		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! You have 4 more attempts at guessing " +
-					"the random number.\nTry again.");
-		}
-		usersInput = keyboard.nextLine();
-		numberGuessing = Integer.parseInt(usersInput);
-		if(numberGuessing < 0){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		if(numberGuessing > 100){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		if(numberGuessing == generatedNumber){
-			System.out.println("Congrats! You were correct on your second try. "+generatedNumber+" was the random number" +
-					" and feel free to play again!");
-			System.exit(0);
-		}
-		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! You have 3 more attempts left at guessing " +
-					"the random number.\nTry again.");
-		}
-		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! You have 3 more attempts left at guessing " +
-					"the random number.\nTry again.");
-		}
-		usersInput = keyboard.nextLine();
-		numberGuessing = Integer.parseInt(usersInput);
-		if(numberGuessing < 0){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		if(numberGuessing > 100){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}            
-		if(numberGuessing == generatedNumber){
-			System.out.println("Congrats! You were correct on your third try. "+generatedNumber+" was the random number" +
-					" and feel free to play again!");
-			System.exit(0);
-		}
-		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! You have 2 more attempts left at guessing " +
-					"the random number.\nTry again.");
-		}
-		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! You have 2 more attempts left at guessing " +
-					"the random number.\nTry again.");
-		}    
-		usersInput = keyboard.nextLine();
-		numberGuessing = Integer.parseInt(usersInput);
-		if(numberGuessing < 0){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		if(numberGuessing > 100){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}            
-		if(numberGuessing == generatedNumber){
-			System.out.println("Congrats! You were correct on your fourth try. "+generatedNumber+" was the random number" +
-					" and feel free to play again!");
-			System.exit(0);
-		}
-		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! You have 1 last attempt of guessing " +
-					"the random number.\nTry again.");
-		}
-		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! You have 1 last attempt of guessing " +
-			"the random number.\nTry again.");
-		}
-		usersInput = keyboard.nextLine();
-		numberGuessing = Integer.parseInt(usersInput);
-		if(numberGuessing < 0){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}
-		if(numberGuessing > 100){
-			System.out.println("Invalid! Please pick a number between 0-100");
-			usersInput = keyboard.nextLine();
-			numberGuessing = Integer.parseInt(usersInput);
-		}            
-		if(numberGuessing == generatedNumber){
-			System.out.println("Congrats! You were correct on your last try. "+generatedNumber+" was the random number" +
-					" and feel free to play again!");
-			System.exit(0);
-		}
-		if(numberGuessing > generatedNumber){
-			System.out.println(numberGuessing+" was too high of a number! Sorry that was your last attempt. The random" +
-					" number was "+generatedNumber+". Feel free to play again!");
-			System.exit(0);
-		}
-		if(numberGuessing < generatedNumber){
-			System.out.println(numberGuessing+" was too low of a number! Sorry that was your last attempt. The random" +
-					" number was "+generatedNumber+". Feel free to play again!");
-			System.exit(0);
-		}*/
-		//End of Original Code
-
 		//Loop for Number Guessing Game
-		System.out.print("Do you want to play my new game called The Number Guessing Game?\n1 Yes\n2 No");
-		usersInput = keyboard.nextLine();
-		yesOrNo = Integer.parseInt(usersInput);
-		if(yesOrNo == 0){
-			System.exit(0);
-		}
+		System.out.println("Let's play my Number Guessing Game!");
+		System.out.println("\nTitles\nLegend: 1 Attempt\nKing: 2 Attempts\nKnight: 3 Attempts\nPeasant: 4-7 Attempts\nUseless: 8+ Attempts");
 		generatedNumber = (int) (Math.random() * 100);
-		System.out.println("Guess a number between 0-100.");
+		//Prints out Generated Number for testing Loop
+		System.out.println(generatedNumber);
+		System.out.println("\nGuess a number between 0-100");
 		usersInput = keyboard.nextLine();
 		numberGuessing = Integer.parseInt(usersInput);
 
 		//Prints out Generated Number for testing Loop
-		//System.out.println(generatedNumber);
+		System.out.println(generatedNumber);
 
 		int a = 0;
-		int g = 1;
+		int g = 0;
 		int fn = Integer.parseInt(usersInput);
-		int po;
+		int po = 0;
+		String Title = "Error";
+		String g1 = "Error";
+		String g2 = "Error";
+		String g3 = "Error";
 
 		boolean Loop = true;
-		while(Loop){
+		while (Loop) {
 			a++;
-			if(numberGuessing == generatedNumber){
-			    g++;
-				if(a == 1){
+			if (numberGuessing == generatedNumber) {
+				g++;
+				if (a == 1) {
 					System.out.println("Congrats! You won using only 1 attempt!");
-				} else{
-					System.out.println("Congrats! You won using "+a+" attempts!");
+				} else {
+					System.out.println("Congrats! You won using " + a + " attempts!");
 				}
-				if(generatedNumber > fn){
-				    po = ?;
-                }
-                System.out.println("Game "+g+" results\nAttempts: "+a+"\nFirst Number: "+fn+"\nGenerated Number: "+generatedNumber+
-                        "\nYou were "+po+ " off on your first attempt.");
-				System.out.println("\nDo you want to play again?\n1 For Yes\n2 For No");
-				usersInput = keyboard.nextLine();
-				yesOrNo = Integer.parseInt(usersInput);
-				if(yesOrNo == 2) {
-					System.exit(0);
-				} else if(yesOrNo == 1){
-					generatedNumber = (int) (Math.random() * 100);
-					System.out.println("Guess a new number between 0-100.");
+				if (generatedNumber > fn) {
+					po = (generatedNumber - fn);
+				} else if (generatedNumber < fn) {
+					po = (fn - generatedNumber);
+				}
+				System.out.println("\nGame " + g + " Results");
+				if (a == 1) {
+					Title = "\nTitle: Legend";
+					System.out.println(Title);
+				} else if (a == 2) {
+					Title = "\nTitle: King";
+					System.out.println(Title);
+				} else if (a == 3) {
+					Title = "\nTitle: Knight";
+					System.out.println(Title);
+				} else if (a == 4 || a == 5 || a == 6 || a == 7) {
+					Title = "\nTitle: Peasant";
+					System.out.println(Title);
+				} else if (a > 7) {
+					Title = "\nTitle: Useless";
+					System.out.println(Title);
+				}
+				System.out.println("Attempts: " + a + "\nFirst Number: " + fn + "\nGenerated Number: " + generatedNumber +
+						"\nYou were " + po + " off on your first attempt.");
+				if (g == 1) {
+					g1 = "Game " + g + " Results" + Title + "\nAttempts: " + a + "\nFirst Number: " + fn + "\nGenerated Number: " + generatedNumber + "\nYou were " + po +
+							" off on your first attempt.";
+				} else if (g == 2) {
+					g2 = "Game " + g + " Results" + Title + "\nAttempts: " + a + "\nFirst Number: " + fn + "\nGenerated Number: " + generatedNumber + "\nYou were " + po +
+							" off on your first attempt.";
+				} else if (g == 3) {
+					g3 = "Game " + g + " Results" + Title + "\nAttempts: " + a + "\nFirst Number: " + fn + "\nGenerated Number: " + generatedNumber + "\nYou were " + po +
+							" off on your first attempt.";
+				}
+				if (g == 1) {
+					System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+					usersInput = keyboard.nextLine();
+					yesOrNo = Integer.parseInt(usersInput);
+					if (yesOrNo == 2) {
+						System.exit(0);
+					} else if (yesOrNo == 1) {
+						generatedNumber = (int) (Math.random() * 100);
+						System.out.println("Guess a new number between 0-100.");
+						usersInput = keyboard.nextLine();
+						numberGuessing = Integer.parseInt(usersInput);
+						fn = Integer.parseInt(usersInput);
+						a = 1;
+					}
+				} else if (g == 2) {
+					System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 To Show Game 1 Results");
+					usersInput = keyboard.nextLine();
+					yesOrNo = Integer.parseInt(usersInput);
+					if (yesOrNo == 2) {
+						System.exit(0);
+					} else if (yesOrNo == 1) {
+						generatedNumber = (int) (Math.random() * 100);
+						System.out.println("Guess a new number between 0-100.");
+						usersInput = keyboard.nextLine();
+						numberGuessing = Integer.parseInt(usersInput);
+						fn = Integer.parseInt(usersInput);
+						a = 1;
+					} else if (yesOrNo == 3) {
+						System.out.println(g1);
+						System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+						usersInput = keyboard.nextLine();
+						yesOrNo = Integer.parseInt(usersInput);
+						if (yesOrNo == 1) {
+							generatedNumber = (int) (Math.random() * 100);
+							System.out.println("Guess a new number between 0-100.");
+							usersInput = keyboard.nextLine();
+							numberGuessing = Integer.parseInt(usersInput);
+							fn = Integer.parseInt(usersInput);
+							a = 1;
+						} else if (yesOrNo == 2) {
+							System.exit(0);
+						}
+					}
+				} else if (g == 3) {
+					System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 1 Results" +
+							"\n4 Displays Game 2 Results");
+					usersInput = keyboard.nextLine();
+					yesOrNo = Integer.parseInt(usersInput);
+					if (yesOrNo == 2) {
+						System.exit(0);
+					} else if (yesOrNo == 1) {
+						generatedNumber = (int) (Math.random() * 100);
+						System.out.println("Guess a new number between 0-100.");
+						usersInput = keyboard.nextLine();
+						numberGuessing = Integer.parseInt(usersInput);
+						fn = Integer.parseInt(usersInput);
+						a = 1;
+					} else if (yesOrNo == 3) {
+						System.out.println(g1);
+						System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 2 Results");
+						usersInput = keyboard.nextLine();
+						yesOrNo = Integer.parseInt(usersInput);
+						if (yesOrNo == 1) {
+							generatedNumber = (int) (Math.random() * 100);
+							System.out.println("Guess a new number between 0-100.");
+							usersInput = keyboard.nextLine();
+							numberGuessing = Integer.parseInt(usersInput);
+							fn = Integer.parseInt(usersInput);
+							a = 1;
+						} else if (yesOrNo == 2) {
+							System.exit(0);
+						} else if (yesOrNo == 3) {
+							System.out.println(g2);
+							System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+							usersInput = keyboard.nextLine();
+							yesOrNo = Integer.parseInt(usersInput);
+							if (yesOrNo == 1) {
+								generatedNumber = (int) (Math.random() * 100);
+								System.out.println("Guess a new number between 0-100.");
+								usersInput = keyboard.nextLine();
+								numberGuessing = Integer.parseInt(usersInput);
+								fn = Integer.parseInt(usersInput);
+								a = 1;
+							} else if (yesOrNo == 2) {
+								System.exit(0);
+							}
+						} else if (yesOrNo == 4) {
+							System.out.println(g2);
+							System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 1 Results");
+							usersInput = keyboard.nextLine();
+							yesOrNo = Integer.parseInt(usersInput);
+							if (yesOrNo == 1) {
+								generatedNumber = (int) (Math.random() * 100);
+								System.out.println("Guess a new number between 0-100.");
+								usersInput = keyboard.nextLine();
+								numberGuessing = Integer.parseInt(usersInput);
+								fn = Integer.parseInt(usersInput);
+								a = 1;
+							} else if (yesOrNo == 2) {
+								System.exit(0);
+							} else if (yesOrNo == 3) {
+								System.out.println(g1);
+								System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+								usersInput = keyboard.nextLine();
+								yesOrNo = Integer.parseInt(usersInput);
+								if (yesOrNo == 1) {
+									generatedNumber = (int) (Math.random() * 100);
+									System.out.println("Guess a new number between 0-100.");
+									usersInput = keyboard.nextLine();
+									numberGuessing = Integer.parseInt(usersInput);
+									fn = Integer.parseInt(usersInput);
+									a = 1;
+								} else if (yesOrNo == 2) {
+									System.exit(0);
+								}
+							}
+						}
+					}
+				} else if(g == 4){
+					System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 1 Results" +
+							"\n4 Displays Game 2 Results\n5 Displays Game 3 Results");
+					usersInput = keyboard.nextLine();
+					yesOrNo = Integer.parseInt(usersInput);
+					if (yesOrNo == 1) {
+						generatedNumber = (int) (Math.random() * 100);
+						System.out.println("Guess a new number between 0-100.");
+						usersInput = keyboard.nextLine();
+						numberGuessing = Integer.parseInt(usersInput);
+						fn = Integer.parseInt(usersInput);
+						a = 1;
+					} else if (yesOrNo == 2) {
+						System.exit(0);
+					} else if (yesOrNo == 3) {
+						System.out.println(g1);
+						System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 2 Results");
+						usersInput = keyboard.nextLine();
+						yesOrNo = Integer.parseInt(usersInput);
+						if (yesOrNo == 1) {
+							generatedNumber = (int) (Math.random() * 100);
+							System.out.println("Guess a new number between 0-100.");
+							usersInput = keyboard.nextLine();
+							numberGuessing = Integer.parseInt(usersInput);
+							fn = Integer.parseInt(usersInput);
+							a = 1;
+						} else if (yesOrNo == 2) {
+							System.exit(0);
+						} else if (yesOrNo == 3) {
+							System.out.println(g2);
+							System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+							usersInput = keyboard.nextLine();
+							yesOrNo = Integer.parseInt(usersInput);
+							if (yesOrNo == 1) {
+								generatedNumber = (int) (Math.random() * 100);
+								System.out.println("Guess a new number between 0-100.");
+								usersInput = keyboard.nextLine();
+								numberGuessing = Integer.parseInt(usersInput);
+								fn = Integer.parseInt(usersInput);
+								a = 1;
+							} else if (yesOrNo == 2) {
+								System.exit(0);
+							}
+						} else if (yesOrNo == 4) {
+							System.out.println(g2);
+							System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 1 Results");
+							usersInput = keyboard.nextLine();
+							yesOrNo = Integer.parseInt(usersInput);
+							if (yesOrNo == 1) {
+								generatedNumber = (int) (Math.random() * 100);
+								System.out.println("Guess a new number between 0-100.");
+								usersInput = keyboard.nextLine();
+								numberGuessing = Integer.parseInt(usersInput);
+								fn = Integer.parseInt(usersInput);
+								a = 1;
+							} else if (yesOrNo == 2) {
+								System.exit(0);
+							} else if (yesOrNo == 3) {
+								System.out.println(g1);
+								System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+								usersInput = keyboard.nextLine();
+								yesOrNo = Integer.parseInt(usersInput);
+								if (yesOrNo == 1) {
+									generatedNumber = (int) (Math.random() * 100);
+									System.out.println("Guess a new number between 0-100.");
+									usersInput = keyboard.nextLine();
+									numberGuessing = Integer.parseInt(usersInput);
+									fn = Integer.parseInt(usersInput);
+									a = 1;
+								} else if (yesOrNo == 2) {
+									System.exit(0);
+								}
+							}
+						} else if(yesOrNo == 5){
+							System.out.println(g3);
+							System.out.println("Do you want to play again?\n1 For Yes\n2 For No\n3 Displays Game 1 Results" +
+									"\n4 Displays Game 2 Results");
+							usersInput = keyboard.nextLine();
+							yesOrNo = Integer.parseInt(usersInput);
+							if (yesOrNo == 1) {
+								generatedNumber = (int) (Math.random() * 100);
+								System.out.println("Guess a new number between 0-100.");
+								usersInput = keyboard.nextLine();
+								numberGuessing = Integer.parseInt(usersInput);
+								fn = Integer.parseInt(usersInput);
+								a = 1;
+							} else if (yesOrNo == 2) {
+								System.exit(0);
+							} else if (yesOrNo == 3) {
+								System.out.println(g1);
+								System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+								usersInput = keyboard.nextLine();
+								yesOrNo = Integer.parseInt(usersInput);
+								if (yesOrNo == 1) {
+									generatedNumber = (int) (Math.random() * 100);
+									System.out.println("Guess a new number between 0-100.");
+									usersInput = keyboard.nextLine();
+									numberGuessing = Integer.parseInt(usersInput);
+									fn = Integer.parseInt(usersInput);
+									a = 1;
+								} else if (yesOrNo == 2) {
+									System.exit(0);
+								}
+							} else if(yesOrNo == 4){
+								System.out.println(g2);
+								System.out.println("Do you want to play again?\n1 For Yes\n2 For No");
+								usersInput = keyboard.nextLine();
+								yesOrNo = Integer.parseInt(usersInput);
+								if (yesOrNo == 1) {
+									generatedNumber = (int) (Math.random() * 100);
+									System.out.println("Guess a new number between 0-100.");
+									usersInput = keyboard.nextLine();
+									numberGuessing = Integer.parseInt(usersInput);
+									fn = Integer.parseInt(usersInput);
+									a = 1;
+								} else if (yesOrNo == 2) {
+									System.exit(0);
+								}
+							}
+						}
+					}
+				}
+			}
+				if (a > 1) {
+					System.out.println("You're on attempt " + a + ".");
+				}
+
+				if (numberGuessing > generatedNumber) {
+					System.out.println("Your guess was too high. Try again.");
 					usersInput = keyboard.nextLine();
 					numberGuessing = Integer.parseInt(usersInput);
-					fn = Integer.parseInt(usersInput);
-					a = 1;
+				} else if (numberGuessing < generatedNumber) {
+					System.out.println("Your guess was too low. Try again.");
+					usersInput = keyboard.nextLine();
+					numberGuessing = Integer.parseInt(usersInput);
 				}
-			}
 
-			if(a > 1){
-				System.out.println("You're on attempt "+a+".");
-			}
-
-			if(numberGuessing > generatedNumber){
-				System.out.println("Your guess was too high. Try again.");
-				usersInput = keyboard.nextLine();
-				numberGuessing = Integer.parseInt(usersInput);
-			} else if(numberGuessing < generatedNumber){
-				System.out.println("Your guess was too low. Try again.");
-				usersInput = keyboard.nextLine();
-				numberGuessing = Integer.parseInt(usersInput);
-			}
+			//End of Loop
 		}
-		//End of Loop
 	}
 }
